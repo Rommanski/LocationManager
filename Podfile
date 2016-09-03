@@ -12,4 +12,5 @@ target 'LocationManager' do
 	pod 'SVProgressHUD'
 	pod 'INTULocationManager' # for user location
   pod 'SwiftEventBus', :git => 'https://github.com/cesarferreira/SwiftEventBus.git' # for publish-subscribe-style communication
+  pod 'RealmSwift' # database
 end

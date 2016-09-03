@@ -9,6 +9,7 @@
 import Foundation
 import INTULocationManager
 import SwiftEventBus
+import RealmSwift
 
 class LocationManager {
     private static var classInstance : LocationManager?
@@ -62,6 +63,14 @@ class LocationManager {
                 if self.distnaceFromStart > 50.0 && !self.messageWasShowwed {
                     self.messageWasShowwed = true
                     MessangerHelper.showInfoMessage(withText: "User has travelled 50 mtrs")
+                    
+                    // save to database
+                    let realm = try! Realm()
+                    try! realm.write {
+                        let r = Record()
+                        r.date = NSDate()
+                        realm.add(r)
+                    }
                 }
             } else {
                 // fail dermine location

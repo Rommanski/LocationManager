@@ -1,10 +1,16 @@
 PODS:
   - INTULocationManager (4.2.0)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
+  - RealmSwift (1.0.2):
+    - Realm (= 1.0.2)
   - SVProgressHUD (2.0.3)
   - SwiftEventBus (1.1.0)
 
 DEPENDENCIES:
   - INTULocationManager
+  - RealmSwift
   - SVProgressHUD
   - SwiftEventBus (from `https://github.com/cesarferreira/SwiftEventBus.git`)
 
@@ -19,6 +25,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
+  RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   SwiftEventBus: d334f7aecbddbd995c3de5c262cf35c72db550f3
 
