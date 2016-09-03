@@ -9,7 +9,7 @@
         <!--Tab 2-->
         <scene sceneID="SjI-Vm-Z32">
             <objects>
-                <viewController id="ToV-bY-WG0" sceneMemberID="viewController">
+                <viewController id="ToV-bY-WG0" customClass="Tab2VC" customModule="LocationManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ms5-rp-c2b"/>
                         <viewControllerLayoutGuide type="bottom" id="jYw-oG-3ip"/>
@@ -17,9 +17,32 @@
                     <view key="view" contentMode="scaleToFill" id="J6u-Yt-1FD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Travelled distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh8-2p-wTC">
+                                <rect key="frame" x="279" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbi-nt-60A">
+                                <rect key="frame" x="279" y="49" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gh8-2p-wTC" firstAttribute="centerX" secondItem="J6u-Yt-1FD" secondAttribute="centerX" id="Rre-La-0jT"/>
+                            <constraint firstItem="Gh8-2p-wTC" firstAttribute="top" secondItem="Ms5-rp-c2b" secondAttribute="bottom" id="dhm-5N-EOO"/>
+                            <constraint firstItem="Pbi-nt-60A" firstAttribute="top" secondItem="Gh8-2p-wTC" secondAttribute="bottom" constant="8" id="meU-7d-YB7"/>
+                            <constraint firstItem="Pbi-nt-60A" firstAttribute="centerX" secondItem="J6u-Yt-1FD" secondAttribute="centerX" id="rfO-um-dqR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tab 2" id="2fD-s4-dfu"/>
+                    <connections>
+                        <outlet property="travelledDistanceLabel" destination="Pbi-nt-60A" id="j4K-FA-BS0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXS-p3-xTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

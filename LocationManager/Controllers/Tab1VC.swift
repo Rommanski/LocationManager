@@ -18,14 +18,12 @@ class Tab1VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // start determine user location
-        LocationManager.instance.startSubscribe()
-        
         // subscribe for updating location
         SwiftEventBus.onMainThread(self, name: EventBusConst.locationUpdate) { _ in
-            let location = LocationManager.instance.currentLocation
-            self.latLabel.text = "\(location.latitude)"
-            self.lonLabel.text = "\(location.longitude)"
+            if let location = LocationManager.instance.currentLocation {
+                self.latLabel.text = "\(location.latitude)"
+                self.lonLabel.text = "\(location.longitude)"
+            }
         }
     }
 }

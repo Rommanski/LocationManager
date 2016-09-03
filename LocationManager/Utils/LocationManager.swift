@@ -24,7 +24,10 @@ class LocationManager {
     
     private let locationManager = INTULocationManager.sharedInstance()
     private var subscriptionId : INTULocationRequestID?
-    var currentLocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: CLLocationDegrees(0.0), longitude: CLLocationDegrees(0.0))
+    private var messageWasShowwed : Bool = false
+    var prevLocation : CLLocationCoordinate2D?
+    var currentLocation : CLLocationCoordinate2D?
+    var distnaceFromStart : Double = 0.0
     
     /**
      * State of subscription updating
@@ -46,9 +49,20 @@ class LocationManager {
         // receive location updates
         self.subscriptionId = locationManager.subscribeToLocationUpdatesWithBlock() { (location : CLLocation!, accuracy : INTULocationAccuracy, status : INTULocationStatus) -> Void in
             if INTULocationStatus.Success == status {
+                self.prevLocation = self.currentLocation
                 self.currentLocation = location.coordinate
+                
+                // update travelled distance
+                self.distnaceFromStart += self.distnceToPrevLocation
+                
                 // post an event of updating location
                 SwiftEventBus.post(EventBusConst.locationUpdate)
+                
+                // show message that user has travelled 50 meters
+                if self.distnaceFromStart > 50.0 && !self.messageWasShowwed {
+                    self.messageWasShowwed = true
+                    MessangerHelper.showInfoMessage(withText: "User has travelled 50 mtrs")
+                }
             } else {
                 // fail dermine location
                 print("ERROR: Location determine fail")
@@ -67,15 +81,18 @@ class LocationManager {
     }
     
     /**
-     * Calculate distance from self to the point
-     * Returns distance in kilometers
+     * Calculate distance from self to the prev location
+     * Returns distance in meters
      */
-    func distnceToTheCoordinate( latitude lat : Double, longitude lon : Double ) -> Double {
-        let selfLocation = CLLocation(latitude: self.currentLocation.latitude, longitude: self.currentLocation.longitude)
-        let pointLocation = CLLocation(latitude: lat, longitude: lon)
-        let distance = (selfLocation.distanceFromLocation(pointLocation) / 1000.0)
-        
-        // round with 1 digits precision
-        return round(distance * 10) / 10
+    var distnceToPrevLocation : Double {
+        get {
+            if nil == self.currentLocation || nil == self.prevLocation {
+                return 0.0
+            }
+            
+            let selfLocation = CLLocation(latitude: self.currentLocation!.latitude, longitude: self.currentLocation!.longitude)
+            let pointLocation = CLLocation(latitude: self.prevLocation!.latitude, longitude: self.prevLocation!.longitude)
+            return selfLocation.distanceFromLocation(pointLocation)
+        }
     }
 }

@@ -16,6 +16,8 @@
 		7FA3B5611D7ADC5700B68CF8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5601D7ADC5700B68CF8 /* LocationManager.swift */; };
 		7FA3B5631D7ADDCF00B68CF8 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5621D7ADDCF00B68CF8 /* Const.swift */; };
 		7FA3B5651D7ADE4900B68CF8 /* Tab1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5641D7ADE4900B68CF8 /* Tab1VC.swift */; };
+		7FA3B5691D7AE36C00B68CF8 /* Tab2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5681D7AE36C00B68CF8 /* Tab2VC.swift */; };
+		7FA3B56B1D7AE55000B68CF8 /* MessengerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B56A1D7AE55000B68CF8 /* MessengerHelper.swift */; };
 		C071C87CA81BB409947FB603 /* Pods_LocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B0B19898B8F82743E39A51 /* Pods_LocationManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		7FA3B5601D7ADC5700B68CF8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Utils/LocationManager.swift; sourceTree = "<group>"; };
 		7FA3B5621D7ADDCF00B68CF8 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		7FA3B5641D7ADE4900B68CF8 /* Tab1VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tab1VC.swift; path = Controllers/Tab1VC.swift; sourceTree = "<group>"; };
+		7FA3B5681D7AE36C00B68CF8 /* Tab2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tab2VC.swift; path = Controllers/Tab2VC.swift; sourceTree = "<group>"; };
+		7FA3B56A1D7AE55000B68CF8 /* MessengerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessengerHelper.swift; path = Utils/MessengerHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7FA3B5641D7ADE4900B68CF8 /* Tab1VC.swift */,
+				7FA3B5681D7AE36C00B68CF8 /* Tab2VC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				7FA3B5601D7ADC5700B68CF8 /* LocationManager.swift */,
+				7FA3B56A1D7AE55000B68CF8 /* MessengerHelper.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -372,7 +378,9 @@
 				7FA3B5651D7ADE4900B68CF8 /* Tab1VC.swift in Sources */,
 				7FA3B5611D7ADC5700B68CF8 /* LocationManager.swift in Sources */,
 				7FA3B52F1D7AD98500B68CF8 /* AppDelegate.swift in Sources */,
+				7FA3B5691D7AE36C00B68CF8 /* Tab2VC.swift in Sources */,
 				7FA3B5631D7ADDCF00B68CF8 /* Const.swift in Sources */,
+				7FA3B56B1D7AE55000B68CF8 /* MessengerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
