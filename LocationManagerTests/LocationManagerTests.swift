@@ -18,10 +18,6 @@ class LocationManagerTests: QuickSpec {
     
     override func spec() {
         describe("LocationManager") {
-            beforeEach {  }
-            
-            afterEach {  }
-            
             it("Adds the Record to the Realm") {
                 let origin = self.realm.objects(Record).count
                 

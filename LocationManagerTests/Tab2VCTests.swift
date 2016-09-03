@@ -23,10 +23,6 @@ class Tab2VCTests: QuickSpec {
                 viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Tab2VC") as! Tab2VC
             }
             
-            afterEach {
-                
-            }
-            
             it("Check updating distance on the screen") {
                 let _ = viewController.view
                 let original = Double(viewController.travelledDistanceLabel.text!)
@@ -35,7 +31,7 @@ class Tab2VCTests: QuickSpec {
                 LocationManager.instance.locationUpdated()
                 
                 let distance = Double(viewController.travelledDistanceLabel.text!.componentsSeparatedByString(" ")[0])
-                expect(distance) != original
+                expect(distance).toNot(equal(original))
             }
         }
     }

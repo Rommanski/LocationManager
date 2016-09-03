@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D93A7DEDCF1EE97E9F5C1DF /* Pods_LocationManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7D3C4342A41A1894F785CE /* Pods_LocationManagerTests.framework */; };
-		7F7299D91D7B738700858C19 /* Tab3VCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7299D81D7B738700858C19 /* Tab3VCTests.swift */; };
 		7FA3B52F1D7AD98500B68CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B52E1D7AD98500B68CF8 /* AppDelegate.swift */; };
 		7FA3B5341D7AD98600B68CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA3B5321D7AD98600B68CF8 /* Main.storyboard */; };
 		7FA3B5361D7AD98600B68CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA3B5351D7AD98600B68CF8 /* Assets.xcassets */; };
@@ -48,7 +47,6 @@
 		13B79E8B18DA92AD404B6418 /* Pods-LocationManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationManager/Pods-LocationManager.release.xcconfig"; sourceTree = "<group>"; };
 		3CA521663FDD6BA7DF37419E /* Pods-LocationManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocationManager/Pods-LocationManager.debug.xcconfig"; sourceTree = "<group>"; };
 		3D7D3C4342A41A1894F785CE /* Pods_LocationManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F7299D81D7B738700858C19 /* Tab3VCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab3VCTests.swift; sourceTree = "<group>"; };
 		7FA3B52B1D7AD98500B68CF8 /* LocationManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA3B52E1D7AD98500B68CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FA3B5331D7AD98600B68CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				7FA3B5741D7AF87300B68CF8 /* SupportingFiles */,
 				7FA3B5721D7AF49A00B68CF8 /* Tab1VCTests.swift */,
 				7FA3B5751D7AF89100B68CF8 /* Tab2VCTests.swift */,
-				7F7299D81D7B738700858C19 /* Tab3VCTests.swift */,
 				7FA3B5431D7AD98600B68CF8 /* LocationManagerTests.swift */,
 			);
 			path = LocationManagerTests;
@@ -466,7 +463,6 @@
 			files = (
 				7FA3B5761D7AF89100B68CF8 /* Tab2VCTests.swift in Sources */,
 				7FA3B5731D7AF49A00B68CF8 /* Tab1VCTests.swift in Sources */,
-				7F7299D91D7B738700858C19 /* Tab3VCTests.swift in Sources */,
 				7FA3B5441D7AD98600B68CF8 /* LocationManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,10 +22,6 @@ class Tab1VCTests: QuickSpec {
                 viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Tab1VC") as! Tab1VC
             }
             
-            afterEach {
-            
-            }
-            
             it("Check updating location on the screen") {
                 let _ = viewController.view
                 let val = 20.0
