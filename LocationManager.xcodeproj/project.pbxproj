@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7FA3B52F1D7AD98500B68CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B52E1D7AD98500B68CF8 /* AppDelegate.swift */; };
-		7FA3B5311D7AD98600B68CF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5301D7AD98600B68CF8 /* ViewController.swift */; };
 		7FA3B5341D7AD98600B68CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA3B5321D7AD98600B68CF8 /* Main.storyboard */; };
 		7FA3B5361D7AD98600B68CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA3B5351D7AD98600B68CF8 /* Assets.xcassets */; };
 		7FA3B5391D7AD98600B68CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA3B5371D7AD98600B68CF8 /* LaunchScreen.storyboard */; };
 		7FA3B5441D7AD98600B68CF8 /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5431D7AD98600B68CF8 /* LocationManagerTests.swift */; };
 		7FA3B54F1D7AD98600B68CF8 /* LocationManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B54E1D7AD98600B68CF8 /* LocationManagerUITests.swift */; };
+		7FA3B5611D7ADC5700B68CF8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5601D7ADC5700B68CF8 /* LocationManager.swift */; };
+		7FA3B5631D7ADDCF00B68CF8 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5621D7ADDCF00B68CF8 /* Const.swift */; };
+		7FA3B5651D7ADE4900B68CF8 /* Tab1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5641D7ADE4900B68CF8 /* Tab1VC.swift */; };
+		C071C87CA81BB409947FB603 /* Pods_LocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B0B19898B8F82743E39A51 /* Pods_LocationManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13B0B19898B8F82743E39A51 /* Pods_LocationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B79E8B18DA92AD404B6418 /* Pods-LocationManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationManager/Pods-LocationManager.release.xcconfig"; sourceTree = "<group>"; };
+		3CA521663FDD6BA7DF37419E /* Pods-LocationManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocationManager/Pods-LocationManager.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA3B52B1D7AD98500B68CF8 /* LocationManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA3B52E1D7AD98500B68CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FA3B5301D7AD98600B68CF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7FA3B5331D7AD98600B68CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FA3B5351D7AD98600B68CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FA3B5381D7AD98600B68CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,9 @@
 		7FA3B54A1D7AD98600B68CF8 /* LocationManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA3B54E1D7AD98600B68CF8 /* LocationManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerUITests.swift; sourceTree = "<group>"; };
 		7FA3B5501D7AD98600B68CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FA3B5601D7ADC5700B68CF8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Utils/LocationManager.swift; sourceTree = "<group>"; };
+		7FA3B5621D7ADDCF00B68CF8 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		7FA3B5641D7ADE4900B68CF8 /* Tab1VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tab1VC.swift; path = Controllers/Tab1VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C071C87CA81BB409947FB603 /* Pods_LocationManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,8 @@
 				7FA3B5421D7AD98600B68CF8 /* LocationManagerTests */,
 				7FA3B54D1D7AD98600B68CF8 /* LocationManagerUITests */,
 				7FA3B52C1D7AD98500B68CF8 /* Products */,
+				F7028DDF35D20706E711520E /* Pods */,
+				97DAD356B47878E055830884 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +108,11 @@
 		7FA3B52D1D7AD98500B68CF8 /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
-				7FA3B52E1D7AD98500B68CF8 /* AppDelegate.swift */,
-				7FA3B5301D7AD98600B68CF8 /* ViewController.swift */,
-				7FA3B5321D7AD98600B68CF8 /* Main.storyboard */,
-				7FA3B5351D7AD98600B68CF8 /* Assets.xcassets */,
-				7FA3B5371D7AD98600B68CF8 /* LaunchScreen.storyboard */,
-				7FA3B53A1D7AD98600B68CF8 /* Info.plist */,
+				7FA3B55F1D7ADC3600B68CF8 /* Utils */,
+				7FA3B55E1D7ADAA800B68CF8 /* Supporting Files */,
+				7FA3B55D1D7ADAA000B68CF8 /* UI */,
+				7FA3B55C1D7ADA9900B68CF8 /* Controllers */,
+				7FA3B5621D7ADDCF00B68CF8 /* Const.swift */,
 			);
 			path = LocationManager;
 			sourceTree = "<group>";
@@ -125,6 +135,58 @@
 			path = LocationManagerUITests;
 			sourceTree = "<group>";
 		};
+		7FA3B55C1D7ADA9900B68CF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7FA3B5641D7ADE4900B68CF8 /* Tab1VC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7FA3B55D1D7ADAA000B68CF8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7FA3B5321D7AD98600B68CF8 /* Main.storyboard */,
+				7FA3B5351D7AD98600B68CF8 /* Assets.xcassets */,
+				7FA3B5371D7AD98600B68CF8 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		7FA3B55E1D7ADAA800B68CF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FA3B52E1D7AD98500B68CF8 /* AppDelegate.swift */,
+				7FA3B53A1D7AD98600B68CF8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FA3B55F1D7ADC3600B68CF8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7FA3B5601D7ADC5700B68CF8 /* LocationManager.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		97DAD356B47878E055830884 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13B0B19898B8F82743E39A51 /* Pods_LocationManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7028DDF35D20706E711520E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CA521663FDD6BA7DF37419E /* Pods-LocationManager.debug.xcconfig */,
+				13B79E8B18DA92AD404B6418 /* Pods-LocationManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FA3B5531D7AD98600B68CF8 /* Build configuration list for PBXNativeTarget "LocationManager" */;
 			buildPhases = (
+				636DD2C98FA58E701BA9E7AE /* Check Pods Manifest.lock */,
 				7FA3B5271D7AD98500B68CF8 /* Sources */,
 				7FA3B5281D7AD98500B68CF8 /* Frameworks */,
 				7FA3B5291D7AD98500B68CF8 /* Resources */,
+				F41ACCBC5BDA525252DD064C /* Embed Pods Frameworks */,
+				588421186F94CF7B909EACE1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,13 +316,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		588421186F94CF7B909EACE1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocationManager/Pods-LocationManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		636DD2C98FA58E701BA9E7AE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F41ACCBC5BDA525252DD064C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocationManager/Pods-LocationManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FA3B5271D7AD98500B68CF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FA3B5311D7AD98600B68CF8 /* ViewController.swift in Sources */,
+				7FA3B5651D7ADE4900B68CF8 /* Tab1VC.swift in Sources */,
+				7FA3B5611D7ADC5700B68CF8 /* LocationManager.swift in Sources */,
 				7FA3B52F1D7AD98500B68CF8 /* AppDelegate.swift in Sources */,
+				7FA3B5631D7ADDCF00B68CF8 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,9 +514,11 @@
 		};
 		7FA3B5541D7AD98600B68CF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CA521663FDD6BA7DF37419E /* Pods-LocationManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LocationManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = painted.eggs.LocationManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,9 +527,11 @@
 		};
 		7FA3B5551D7AD98600B68CF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13B79E8B18DA92AD404B6418 /* Pods-LocationManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LocationManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = painted.eggs.LocationManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +603,7 @@
 				7FA3B5551D7AD98600B68CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FA3B5561D7AD98600B68CF8 /* Build configuration list for PBXNativeTarget "LocationManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +612,7 @@
 				7FA3B5581D7AD98600B68CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FA3B5591D7AD98600B68CF8 /* Build configuration list for PBXNativeTarget "LocationManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +621,7 @@
 				7FA3B55B1D7AD98600B68CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

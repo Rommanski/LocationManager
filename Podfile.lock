@@ -1,0 +1,25 @@
+PODS:
+  - INTULocationManager (4.2.0)
+  - SVProgressHUD (2.0.3)
+  - SwiftEventBus (1.1.0)
+
+DEPENDENCIES:
+  - INTULocationManager
+  - SVProgressHUD
+  - SwiftEventBus (from `https://github.com/cesarferreira/SwiftEventBus.git`)
+
+EXTERNAL SOURCES:
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+
+CHECKOUT OPTIONS:
+  SwiftEventBus:
+    :commit: 4b8cbb5a8227b3c29af75e0416689d26178733d8
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+
+SPEC CHECKSUMS:
+  INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftEventBus: d334f7aecbddbd995c3de5c262cf35c72db550f3
+
+COCOAPODS: 0.39.0
