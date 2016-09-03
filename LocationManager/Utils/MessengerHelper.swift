@@ -11,6 +11,6 @@ import SVProgressHUD
 
 struct MessangerHelper {
     static func showInfoMessage(withText text : String) {
-        SVProgressHUD.showInfoWithStatus(text, maskType: SVProgressHUDMaskType.Clear)
+        SVProgressHUD.showInfoWithStatus(text)
     }
 }

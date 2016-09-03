@@ -32,7 +32,6 @@ class Tab3VC: UITableViewController {
         }
     }
     
-    
     // MARK : UITableViewDataSource implementation
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -53,28 +53,35 @@ class LocationManager {
                 self.prevLocation = self.currentLocation
                 self.currentLocation = location.coordinate
                 
-                // update travelled distance
-                self.distnaceFromStart += self.distnceToPrevLocation
-                
-                // post an event of updating location
-                SwiftEventBus.post(EventBusConst.locationUpdate)
-                
-                // show message that user has travelled 50 meters
-                if self.distnaceFromStart > 50.0 && !self.messageWasShowwed {
-                    self.messageWasShowwed = true
-                    MessangerHelper.showInfoMessage(withText: "User has travelled 50 mtrs")
-                    
-                    // save to database
-                    let realm = try! Realm()
-                    try! realm.write {
-                        let r = Record()
-                        r.date = NSDate()
-                        realm.add(r)
-                    }
-                }
+                self.locationUpdated()
             } else {
                 // fail dermine location
                 print("ERROR: Location determine fail")
+            }
+        }
+    }
+    
+    /**
+     * Update all values after location updates
+     */
+    func locationUpdated() {
+        // update travelled distance
+        self.distnaceFromStart += self.distnceToPrevLocation
+        
+        // post an event of updating location
+        SwiftEventBus.post(EventBusConst.locationUpdate)
+        
+        // show message that user has travelled 50 meters
+        if self.distnaceFromStart > 50.0 && !self.messageWasShowwed {
+            self.messageWasShowwed = true
+            MessangerHelper.showInfoMessage(withText: "User has travelled 50 mtrs")
+            
+            // save record about 50 travelled meters to database
+            let realm = try! Realm()
+            try! realm.write {
+                let r = Record()
+                r.date = NSDate()
+                realm.add(r)
             }
         }
     }

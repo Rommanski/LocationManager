@@ -12,7 +12,6 @@
 		7FA3B5361D7AD98600B68CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA3B5351D7AD98600B68CF8 /* Assets.xcassets */; };
 		7FA3B5391D7AD98600B68CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA3B5371D7AD98600B68CF8 /* LaunchScreen.storyboard */; };
 		7FA3B5441D7AD98600B68CF8 /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5431D7AD98600B68CF8 /* LocationManagerTests.swift */; };
-		7FA3B54F1D7AD98600B68CF8 /* LocationManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B54E1D7AD98600B68CF8 /* LocationManagerUITests.swift */; };
 		7FA3B5611D7ADC5700B68CF8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5601D7ADC5700B68CF8 /* LocationManager.swift */; };
 		7FA3B5631D7ADDCF00B68CF8 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5621D7ADDCF00B68CF8 /* Const.swift */; };
 		7FA3B5651D7ADE4900B68CF8 /* Tab1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5641D7ADE4900B68CF8 /* Tab1VC.swift */; };
@@ -20,6 +19,8 @@
 		7FA3B56B1D7AE55000B68CF8 /* MessengerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B56A1D7AE55000B68CF8 /* MessengerHelper.swift */; };
 		7FA3B56F1D7AEBEA00B68CF8 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B56E1D7AEBEA00B68CF8 /* Record.swift */; };
 		7FA3B5711D7AECED00B68CF8 /* Tab3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5701D7AECED00B68CF8 /* Tab3VC.swift */; };
+		7FA3B5731D7AF49A00B68CF8 /* Tab1VCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5721D7AF49A00B68CF8 /* Tab1VCTests.swift */; };
+		7FA3B5761D7AF89100B68CF8 /* Tab2VCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3B5751D7AF89100B68CF8 /* Tab2VCTests.swift */; };
 		C071C87CA81BB409947FB603 /* Pods_LocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B0B19898B8F82743E39A51 /* Pods_LocationManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +55,6 @@
 		7FA3B5431D7AD98600B68CF8 /* LocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
 		7FA3B5451D7AD98600B68CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FA3B54A1D7AD98600B68CF8 /* LocationManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FA3B54E1D7AD98600B68CF8 /* LocationManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerUITests.swift; sourceTree = "<group>"; };
-		7FA3B5501D7AD98600B68CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FA3B5601D7ADC5700B68CF8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Utils/LocationManager.swift; sourceTree = "<group>"; };
 		7FA3B5621D7ADDCF00B68CF8 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		7FA3B5641D7ADE4900B68CF8 /* Tab1VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tab1VC.swift; path = Controllers/Tab1VC.swift; sourceTree = "<group>"; };
@@ -63,6 +62,8 @@
 		7FA3B56A1D7AE55000B68CF8 /* MessengerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessengerHelper.swift; path = Utils/MessengerHelper.swift; sourceTree = "<group>"; };
 		7FA3B56E1D7AEBEA00B68CF8 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = Models/Record.swift; sourceTree = "<group>"; };
 		7FA3B5701D7AECED00B68CF8 /* Tab3VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tab3VC.swift; path = Controllers/Tab3VC.swift; sourceTree = "<group>"; };
+		7FA3B5721D7AF49A00B68CF8 /* Tab1VCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tab1VCTests.swift; path = LocationManagerUITests/Tab1VCTests.swift; sourceTree = SOURCE_ROOT; };
+		7FA3B5751D7AF89100B68CF8 /* Tab2VCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab2VCTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +97,6 @@
 			children = (
 				7FA3B52D1D7AD98500B68CF8 /* LocationManager */,
 				7FA3B5421D7AD98600B68CF8 /* LocationManagerTests */,
-				7FA3B54D1D7AD98600B68CF8 /* LocationManagerUITests */,
 				7FA3B52C1D7AD98500B68CF8 /* Products */,
 				F7028DDF35D20706E711520E /* Pods */,
 				97DAD356B47878E055830884 /* Frameworks */,
@@ -129,19 +129,12 @@
 		7FA3B5421D7AD98600B68CF8 /* LocationManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				7FA3B5741D7AF87300B68CF8 /* SupportingFiles */,
+				7FA3B5721D7AF49A00B68CF8 /* Tab1VCTests.swift */,
+				7FA3B5751D7AF89100B68CF8 /* Tab2VCTests.swift */,
 				7FA3B5431D7AD98600B68CF8 /* LocationManagerTests.swift */,
-				7FA3B5451D7AD98600B68CF8 /* Info.plist */,
 			);
 			path = LocationManagerTests;
-			sourceTree = "<group>";
-		};
-		7FA3B54D1D7AD98600B68CF8 /* LocationManagerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7FA3B54E1D7AD98600B68CF8 /* LocationManagerUITests.swift */,
-				7FA3B5501D7AD98600B68CF8 /* Info.plist */,
-			);
-			path = LocationManagerUITests;
 			sourceTree = "<group>";
 		};
 		7FA3B55C1D7ADA9900B68CF8 /* Controllers */ = {
@@ -188,6 +181,14 @@
 				7FA3B56E1D7AEBEA00B68CF8 /* Record.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		7FA3B5741D7AF87300B68CF8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7FA3B5451D7AD98600B68CF8 /* Info.plist */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		97DAD356B47878E055830884 /* Frameworks */ = {
@@ -404,6 +405,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA3B5761D7AF89100B68CF8 /* Tab2VCTests.swift in Sources */,
+				7FA3B5731D7AF49A00B68CF8 /* Tab1VCTests.swift in Sources */,
 				7FA3B5441D7AD98600B68CF8 /* LocationManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FA3B54F1D7AD98600B68CF8 /* LocationManagerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

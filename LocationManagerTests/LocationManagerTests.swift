@@ -7,30 +7,46 @@
 //
 
 import XCTest
+import RealmSwift
+import SwiftEventBus
 @testable import LocationManager
 
 class LocationManagerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInsertingToDatabase() {
+        let realm = try! Realm()
+        let originalSize = realm.objects(Record).count
+        
+        LocationManager.instance.distnaceFromStart = 60
+        LocationManager.instance.locationUpdated()
+        
+        XCTAssertEqual(realm.objects(Record).count, originalSize + 1)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+
+    func testUpdatingLocation() {
+        SwiftEventBus.onMainThread(self, name: EventBusConst.locationUpdate) { _ in
+            XCTAssert(true)
         }
+        
+        LocationManager.instance.locationUpdated()
     }
     
+    func testStatusOfSubscription() {
+        LocationManager.instance.startSubscribe()
+        XCTAssertEqual(LocationManager.instance.subcribtionState, true)
+    }
+    
+    func testStatusOfSubscription2() {
+        LocationManager.instance.finishSubscribe()
+        XCTAssertEqual(LocationManager.instance.subcribtionState, false)
+    }
 }
