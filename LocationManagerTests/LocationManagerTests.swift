@@ -12,6 +12,7 @@ import SwiftEventBus
 @testable import LocationManager
 
 class LocationManagerTests: XCTestCase {
+    let realm = try! Realm(configuration: Realm.Configuration(fileURL: nil, inMemoryIdentifier: "test", encryptionKey: nil, readOnly: false, schemaVersion: 0, migrationBlock: nil, objectTypes: nil))
     
     override func setUp() {
         super.setUp()
@@ -19,16 +20,6 @@ class LocationManagerTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
-    }
-    
-    func testInsertingToDatabase() {
-        let realm = try! Realm()
-        let originalSize = realm.objects(Record).count
-        
-        LocationManager.instance.distnaceFromStart = 60
-        LocationManager.instance.locationUpdated()
-        
-        XCTAssertEqual(realm.objects(Record).count, originalSize + 1)
     }
     
 
