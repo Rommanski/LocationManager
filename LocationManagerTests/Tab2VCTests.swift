@@ -7,29 +7,36 @@
 //
 
 import XCTest
-import UIKit
+import RealmSwift
+import SwiftEventBus
+import Quick
+import Nimble
 import INTULocationManager
 @testable import LocationManager
 
-class Tab2VCTests: XCTestCase {
-    var viewController : Tab2VC!
-    
-    override func setUp() {
-        super.setUp()
-        
-        viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Tab2VC") as! Tab2VC
-        
-    }
-    
-    func testUpdatingLocation() {
-        let _ = viewController.view
-        let originel = Double(viewController.travelledDistanceLabel.text!)
-        LocationManager.instance.prevLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(0.0), longitude: CLLocationDegrees(0.0))
-        LocationManager.instance.currentLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(1.0), longitude: CLLocationDegrees(0.0))
-        LocationManager.instance.locationUpdated()
-        
-        let distance = Double(viewController.travelledDistanceLabel.text!)
-        XCTAssert(originel != distance)
+class Tab2VCTests: QuickSpec {
+    override func spec() {
+        describe("Tab2VC Controller") {
+            var viewController : Tab2VC!
+            
+            beforeEach {
+                viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Tab2VC") as! Tab2VC
+            }
+            
+            afterEach {
+                
+            }
+            
+            it("Check updating distance on the screen") {
+                let _ = viewController.view
+                let original = Double(viewController.travelledDistanceLabel.text!)
+                LocationManager.instance.prevLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(0.0), longitude: CLLocationDegrees(0.0))
+                LocationManager.instance.currentLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(1.0), longitude: CLLocationDegrees(0.0))
+                LocationManager.instance.locationUpdated()
+                
+                let distance = Double(viewController.travelledDistanceLabel.text!.componentsSeparatedByString(" ")[0])
+                expect(distance) != original
+            }
+        }
     }
 }
-

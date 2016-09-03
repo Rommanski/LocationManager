@@ -9,35 +9,45 @@
 import XCTest
 import RealmSwift
 import SwiftEventBus
+import Quick
+import Nimble
 @testable import LocationManager
 
-class LocationManagerTests: XCTestCase {
-    let realm = try! Realm(configuration: Realm.Configuration(fileURL: nil, inMemoryIdentifier: "test", encryptionKey: nil, readOnly: false, schemaVersion: 0, migrationBlock: nil, objectTypes: nil))
+class LocationManagerTests: QuickSpec {
+    let realm = try! Realm()
     
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
-
-    func testUpdatingLocation() {
-        SwiftEventBus.onMainThread(self, name: EventBusConst.locationUpdate) { _ in
-            XCTAssert(true)
+    override func spec() {
+        describe("LocationManager") {
+            beforeEach {  }
+            
+            afterEach {  }
+            
+            it("Adds the Record to the Realm") {
+                let origin = self.realm.objects(Record).count
+                
+                LocationManager.instance.distnaceFromStart = 60
+                LocationManager.instance.locationUpdated()
+                
+                expect(self.realm.objects(Record).count).to(equal(origin + 1))
+            }
+            
+            it("Check location updating") {
+                SwiftEventBus.onMainThread(self, name: EventBusConst.locationUpdate) { _ in
+                    XCTAssert(true)
+                }
+                
+                LocationManager.instance.locationUpdated()
+            }
+            
+            it("Test status of subscription") {
+                LocationManager.instance.startSubscribe()
+                expect(LocationManager.instance.subcribtionState).to(equal(true))
+            }
+            
+            it("Test status of subscription 2") {
+                LocationManager.instance.startSubscribe()
+                expect(LocationManager.instance.subcribtionState).to(equal(true))
+            }
         }
-        
-        LocationManager.instance.locationUpdated()
-    }
-    
-    func testStatusOfSubscription() {
-        LocationManager.instance.startSubscribe()
-        XCTAssertEqual(LocationManager.instance.subcribtionState, true)
-    }
-    
-    func testStatusOfSubscription2() {
-        LocationManager.instance.finishSubscribe()
-        XCTAssertEqual(LocationManager.instance.subcribtionState, false)
     }
 }
